@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Love Anchika 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500;600&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #b30000, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .page {
+      background: white;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 700px;
+      height: 80vh;
+      padding: 2rem;
+      text-align: center;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.8s ease;
+    }
+
+    .page.active {
+      display: flex;
+      animation: fadeSlide 0.8s ease forwards;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #b30000;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      background-color: #b30000;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 9999px;
+      padding: 1.2rem 2.8rem;
+      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(179, 0, 0, 0.4);
+    }
+
+    button:hover {
+      background-color: #ff1a1a;
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(255, 26, 26, 0.5);
+    }
+
+    #music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #b30000;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      padding: 1rem 1.8rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(179, 0, 0, 0.5);
+      transition: all 0.3s ease;
+      display: none;
+    }
+
+    #music-btn:hover {
+      background-color: #ff1a1a;
+      transform: scale(1.05);
+    }
+
+    /* Scrollable letter styling */
+    .letter-text {
+      font-family: 'Quicksand', sans-serif; /* ✅ Cute & readable font */
+      font-size: 1.7rem; /* Slightly bigger */
+      line-height: 1.9;
+      color: #5a0000;
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      border: 3px solid #b30000;
+      border-radius: 20px;
+      background: #fff8f8;
+      text-align: left;
+      white-space: pre-line;
+    }
+
+    .letter-text::-webkit-scrollbar {
+      width: 8px;
+    }
+    .letter-text::-webkit-scrollbar-thumb {
+      background: #b30000;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="cant-help-falling-in-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Music Button -->
+  <button id="music-btn">🎵 Play Music</button>
+
+  <!-- PAGE 1 -->
+  <div id="page1" class="page active">
+    <h1>For My Lobeee, Anchikaaaa hehehe 💖</h1>
+    <p>yaha yahaa click karrr bhondu 😆😆</p>
+    <button id="start-btn">Open Card</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id="page2" class="page">
+    <h1>I LOOOVVEEEEE YOUUUUU SOOOO MUCHHH MYYYYYY LOVEEEE BHONDUU LALLLL 💞</h1>
+    <p>PATAAA NAHII MEREEE BINAA TERAAA KYAA HOGAAA 😔😔. ❤️</p>
+    <button onclick="nextPage()">Next ➜</button>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div id="page3" class="page">
+    <h1>AHEMM AHEMM THIS IS FOR MY BABYGURLL </h1>
+    <p>TUZHEEE PATAA HAII ANCHIKAAA I LOBEE YOUU 😆 AAJ MUZHE KUCH FEEL HUA KIII YOU ARE THE ONLY ONE JISKE SAATH ME TRULY KUCH BHI BOL SKATA SOCHNA NHI PADTAA JISPE HAKK JATAA SAKTAA HUU TEREE SAATH MEEE EEKDUM FREEE HUU FREEE HEHEHEH ACCHA LAGTAA HAI JAB AISAA KOI HOOO APNE LIFE ME 😋😋 YOU TRULY GIVES A MEANING TO MY LIFE</p>
+    <button onclick="nextPage()">Next ➜</button>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div id="page4" class="page">
+    <h1>A LETTER FOR MY BUDDHU 💌</h1>
+    <div class="letter-text">
+HUIII HUIII HUIIII MYYYY BUDDHUU GOODIEE YEE LETTER AND THIS ALLL SPECIAL VIRTUAL CARD MEE ABHI JUSTT EXAM KE BAAD BANANAA CHALUU KARDIYAA HUUUU AURR AURRR THIS IS A LETTER FOR YOUUU THINK OF IT AS A GOOD LUCK CHARM FOR YOUR TRIP 😆😆😆 TERE SE ZYADA EXCITED TO ME HUU TRIP KE LIYEEE BECAUSEE FINNALYYY TUUU JAAA RAHII HAIII BAHARRRR FINNALLYYYY YAYAYAYAAYAYAYYA THIS ISS SOOO GOOODDDD IM SOOOO HAPPPYY FORRR YOUUU ANCHIKKAAAA I LOOOVEEEE YOUUUU PARRR APNIII BAATE NAW HO PAYEGIII 😀🙃🙃🙃 MUZHEEE WOOO BHII NAHIII CHAHIYEEE I WANT TOO TALKKK WITHHH YOUUUU NAAAA MUZHEEE TEREEE SAATH REHNA HAIII 24/7 YEE EXAM KE WAJAH SEE ME THEEK SE BAAT BHI NAHI KAR PAYA TERE SAATH BUTTT BUTTT I LOOOVEEEEEE YOUUU BUDDDHUUU HEHEHEHEHEHEHEHE MUZHEEE LEGITTT TUZHEEE BOHOT SAARIII BAATEE KARNII HAII I LIKEE OPENING UP TOO YOUU AND SHARING THINGS WITH YOUUUU ANDDD TUZHEEE BOLNAAA BHII PASANDDDD AYEEEEE YEEE KAREGIII TO MAAR KHAYEGIII YEE MATT PEHENNN YEE KARRRR THISS FEELS SOOO GOOODDDD 😭😭😆😆😆 FINNALYYY I HAVE SOMEONE WHO IS MINE ON WHOM JISPE ME MERA HAKKK JATA SAKTAA HUU EHEHEHEH AURRR I FINNALY HAVE SOMEONE WHO LISTENS TO ME, WHO ACCEPTS MEE AS I AM AND WHOO UNDERSTANDS ME AND TRIES TO UNDERSTANDS ME JUST FOR ME THIS IS SOOOO SPECIALLL YKKK , IM SOOO HAPPYY FOR YOUUU THOOO FINNALLYYY TUMM JAA RAHI TRRIP PARRR AYAYYAYAYAYAYAYA LESGOOOOO HEHEHEHEHEHEH MAZEEEE KARNAAA BUDDHUU THEEEKE AURRRR MERE BAARE ME SOCHNAAA AUR MUZHEE CALL AUR TEXT KARTII RHENAAA BECAUSE TRULYYYY YOUUU AREEE SERIOUSLY THE BEST THING HAPPENEND TO ME AND I LOVE YOUU SOO MUCH
+    </div>
+    <button onclick="nextPage()">Continue ➜</button>
+  </div>
+
+  <!-- PAGE 5 -->
+  <div id="page5" class="page">
+    <h1>Promise 💍</h1>
+    <p>I promise to be with you through every joy and every tear. 
+    I’ll always be proud of you, always cheering for you, and always loving you endlessly. 💖</p>
+    <button onclick="nextPage()">Next ➜</button>
+  </div>
+
+  <!-- PAGE 6 -->
+  <div id="page6" class="page">
+    <h1>Forever Yours 💞</h1>
+    <p>No matter how far you go, my heart travels with you. 
+    Come back safe and happy, my love. 🩷</p>
+    <p style="color:gray;">— With all my love, Harshal 💗</p>
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-btn');
+    const startBtn = document.getElementById('start-btn');
+    let current = 0;
+
+    startBtn.addEventListener('click', () => {
+      pages[current].classList.remove('active');
+      current++;
+      pages[current].classList.add('active');
+
+      music.play().then(() => {
+        musicBtn.style.display = 'block';
+        musicBtn.textContent = "⏸️ Pause Music";
+      }).catch((err) => {
+        console.log("Music blocked, tap Play manually 🎵", err);
+        musicBtn.style.display = 'block';
+      });
+    });
+
+    function nextPage() {
+      pages[current].classList.remove('active');
+      current++;
+      if (current < pages.length) {
+        pages[current].classList.add('active');
+      }
+    }
+
+    musicBtn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        musicBtn.textContent = "⏸️ Pause Music";
+      } else {
+        music.pause();
+        musicBtn.textContent = "🎵 Play Music";
+      }
+    });
+  </script>
+
+</body>
+</html>
